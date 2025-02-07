@@ -14,7 +14,7 @@ class Delete extends Component {
   render() {
     return (
       <>
-        <button onClick={this.handleDelete}>
+        <button onClick={this.handleDelete} className="btn btn-danger">
           <Trash3 />
         </button>
       </>
