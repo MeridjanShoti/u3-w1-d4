@@ -3,11 +3,15 @@ import Delete from "./Delete";
 class CommentList extends Component {
   render() {
     return this.props.comments.map((comment) => (
-      <>
-        <p key={comment._id}>{comment.comment}</p>
-        <Delete asin={comment._id} />
+      <div key={`comment-${comment._id}`}>
+        <p>{comment.author}</p>
+        <div className="d-flex justify-content-between align-items-center">
+          <p>{comment.comment}</p>
+          <Delete asin={comment._id} />
+        </div>
+
         <hr />
-      </>
+      </div>
     ));
   }
 }
